@@ -15,6 +15,7 @@ The rule to enforce a trailing slash has to be placed after line #36 in the defa
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !^/api
 RewriteCond %{REQUEST_URI} !^/panel
+RewriteCond %{REQUEST_URI} !^/media
 RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
 ```
 
